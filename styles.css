@@ -8,6 +8,17 @@ body {
     padding: 0;
     margin: 0;
     background: linear-gradient(to right, cyan, green);
+    background-size: 500%;
+    animation: bg-animation 5s infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
 }
 
 .calculator-grid {
@@ -24,11 +35,17 @@ body {
     font-size: 2rem;
     border: 1px solid white;
     outline: none;
-    background-color: rgba(255,255,255,65%);
+    /* background-color: rgba(255,255,255,65%); */
+    background-image: linear-gradient(to right, rgb(254, 254, 254), rgb(26, 196, 63), #e1c743);;
+    background-size: 500%;
+    background-position: left;
+    /* transition: background-position 200ms; */
+    transition: background-size 200ms;
 }
 
 .calculator-grid > button:hover {
-    background-color: rgba(255,255,255,90%);
+    transition: background-size 100% 200ms;
+    /* background-position: right; */
 }
 
 .span-two {
