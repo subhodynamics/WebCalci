@@ -7,7 +7,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(to right, cyan, green);
+    background: linear-gradient(to right, cyan, rgb(0, 183, 255));
     background-size: 500%;
     animation: bg-animation 5s infinite alternate;
 }
@@ -31,19 +31,20 @@ body {
 }
 
 .calculator-grid > button {
-    cursor: pointer;
     font-size: 2rem;
-    border: 1px solid white;
-    outline: none;
-    /* background-color: rgba(255,255,255,65%); */
-    background-image: linear-gradient(to right, rgba(254, 254, 254, .75), rgba(0, 0,0, 1), rgba(254, 254, 254, .45));
-    background-size: 500%;
-    background-position: left;
-    transition: background-position 200ms;
+    background: #ededed;
+    border: 1px solid #ccc;
+    padding: 10px 30px;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
-.calculator-grid > button:hover {
-    background-position: right;
+.calculator-grid > button:active {
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+            box-shadow: inset 0px 0px 5px #c1c1c1;
+     outline: none;
 }
 
 .span-two {
